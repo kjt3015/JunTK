@@ -1,9 +1,3 @@
 # git token
-<<<<<<< HEAD
-# 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
-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
-=======
-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
 
-git push origin master
->>>>>>> d8aa9ba4a995404971b4816729ef30d0632021f7
+git push origin main
