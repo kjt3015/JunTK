@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- 모든 페이지 공통css -->
+    <link rel="stylesheet" href="login.css">
+    <!-- 로그인 페이지 css -->
+
+    <!--로그인 페이지: 아이디, 비밀번호, 회원가입 페이지로 이동기능 -->
+</head>
+
+<body>
+    <!-- 페이지 공통 디자인(mainBox, grid, grid_element 요소) -->
+    <div id="mainBox">
+        <div id="grid">
+            <div class="grid_element" id="gone">
+                <p style="text-align: center;">AD</p>
+            </div>
+
+            <div class="grid_element">
+                <!-- 로그인 세션에 input(text, password), button을 li태그에 넣어 정리했다. -->
+                <section id="login_section">
+                    <h2>LOGIN</h2>
+                    <ul>
+                        <li><input type="text" placeholder="Enter the ID"></li>
+                        <li><input type="password" placeholder="Enter the PW"></li>
+                        <li><a href="board.html"><button>Login</button></a></li>
+                    </ul>
+                    <div>
+                        <a href="sign_up.html">sign up</a><br>
+                        <a href="#">I forgot my ID/PW</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

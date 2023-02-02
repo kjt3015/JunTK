@@ -1,0 +1,24 @@
+/* 반응형 모바일 버젼
+1. grid를 모두 취소한다
+2. 좌측 AD section을 display:none 한다.
+3. mainBox의 크기를 매우 조금의 여유를 두고 화면에 가득차에 한다 */
+
+@media(max-width: 800px){
+    #grid{
+        display: block;
+    }
+    #gone{
+        display: none;
+    }
+    #mainBox{
+        height: 90%;
+        width: 90%;
+        margin: 5%;
+
+        background-color: rgb(73, 109, 137);
+        box-shadow: 10px 10px 10px rgb(46, 45, 45);
+    
+        border: 3px solid black;
+        border-radius: 30px;
+    }
+}
