@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.board_list_section{
+    padding: 50px;
+}
+.board_list{
+    width: 100%;
+}
+
+table{
+    /* 표의 테두리선들간의 간격없애기*/
+    border-collapse: collapse;
+}
+
+/* th와td에 대한 스타일 */
+.board_list th,
+.board_list td{
+    /* border: 1px solid black; */
+    text-align: center;
+    padding: 10px;
+}
+
+/* .board_list클레스의 tbody태그의 tr태그의 td태그중 2번째(제목) */
+.board_list tbody tr td:nth-child(2){
+    text-align: left;
+}
+
+.board_list tr{
+    border-bottom: 1px solid black;
+}
+
+h2{
+    border-bottom: 3px solid black;
+    padding: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    text-align: right;
+}
