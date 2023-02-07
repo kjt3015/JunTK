@@ -1,4 +1,58 @@
-# git token
-1
-git push origin main
-# 2023.02.01_16:29
+=========================================================================
+
+
+1. 메타태그를 이용한 방법
+
+<meta http-equiv="Refresh" content="0; URL=http://abc.co.kr">
+-------> abc.co.kr 로 연결
+<meta http-equiv="Refresh" content="0; URL=/tt/">
+-------> /tt 폴더로 연결
+
+
+
+2. 자바스크립트를 이용한 방법
+
+<script>document.location="http://abc.co.kr";</script>
+<script>document.location="/tt/";</script>
+
+<script language="javascript">
+location.replace("이동주소");
+</script
+
+3. PHP 를 이용한 방법
+
+<? header("Location:http://abc.co.kr"); ?>
+<? header("Location:/tt/"); ?>
+
+============================================================================
+
+
+
+
+port번호는 사용할 수 있는 영역이 정해져 있습니다.
+
+ 0 ~ 1023 : well-known port번호 영역입니다.
+   이 영역의 port번호는 UNIX/LINUX에서 root 권한으로만 port를 열 수 있습니다.
+   예약영역이라고 보면 됩니다.
+
+ 1024 ~ 49151번: 등록된 포트 (registered port)
+   이 영역은 주로 서버 소켓으로 사용하는 영역입니다.
+
+ 49152 ~ 65535번 : 동적 포트(dynamic port)
+   이 영역은 client가 connect(2)시 
+   또는 bind(2)없이 server socket을 생성했어 listen(2)할 경우에 자동으로 할당되는 영역입니다.
+   server socket에서 자동할당하면, 
+   client에게 할당된 port번호를 알릴방법이 있어야하기 때문에 서버 소켓은 prot번호를 정합니다. 
+
+
+
+
+===============================================================================
+
+
+netstat -tnlp
+
+
+===================================================================================
+
+
