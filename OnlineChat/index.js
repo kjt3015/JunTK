@@ -1,4 +1,7 @@
 // https://geundung.dev/58
+// https://geundung.dev/60?category=719250
+
+
 console.log('Heool Nodejs!!');
 
 // 설치한 express module 불러오기
@@ -9,6 +12,7 @@ const socket = require('socket.io')
 
 // Node.js 기본 내장 모듈 불러오기
 const http = require('http')
+const fs = require('fs')
 
 // express객체 생성
 const app = express()
@@ -19,10 +23,25 @@ const server = http.createServer(app)
 // 생성된 서버를 socket.io에 바인딩
 const io = socket(server)
 
+// 정적파일을 제공하기 위해 미들웨어를 사용하는 코드
+app.use('/css', express.static('./static/css'))
+app.use('/js', express.static('./static/js'))
+
+
 // Get 방식으로 / 경로에 접속하면 실행 됨
-app.get('/', function(request, response){
+app.get('/', function(request, response){    
     console.log('유저가 / 으로 접속하였습니다.')
     response.send('Hello, Express Server.')
+    
+    fs.readFile('./static/index.html', function(err, data){
+        if(err){
+            response.send('에러')
+        } else{
+            response.writeHead(200, {'Content-Type':'text/html'})
+            response.write(data)
+            response.end()
+        }
+    })
 })
 
 // 서버를 81포트로 listen
