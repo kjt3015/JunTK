@@ -1,0 +1,8 @@
+nohup vs pm2
+https://www.google.com/search?q=nohup+vs+pm2&oq=pm2+nohu&aqs=chrome.2.69i57j0i512j0i8i30i625.6282j0j7&sourceid=chrome&ie=UTF-8
+
+pm2
+https://www.google.com/search?q=pm2&oq=pm2&aqs=chrome..69i57j0i3j0i512l8.600j0j7&sourceid=chrome&ie=UTF-8
+
+nohup
+https://marlboroyw.tistory.com/373
