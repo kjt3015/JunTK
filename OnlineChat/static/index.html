@@ -9,24 +9,19 @@
     
     <!-- import -->
     <link rel="stylesheet" href="./css/index.css">
-<<<<<<< HEAD
-    <!-- <script src="../node_modules/socket.io/client-dist/socket.io.js"></script> -->
     <script src="./socket.io/socket.io.js"></script>
     <script src="./js/index.js"></script>
-=======
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="/js/index.js"></script>
->>>>>>> a3e5bf721810c9e68a4136934a6d976a4fb39418
     
 </head>
 <body>
-    <h1>
-        김준태의 온라인 채팅방
-    </h1>
-    
     <div id="main">
-        <input type="text" id="test">
+      <div id="chat">
+        <!-- 채팅 메시지 영역 -->
+      </div>
+      <div>
+        <input type="text" id="test" placeholder="메시지를 입력해주세요..">
         <button onclick="send()">전송</button>
+      </div>
     </div>
 </body>
 </html>

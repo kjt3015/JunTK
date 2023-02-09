@@ -1,8 +1,53 @@
-#main{
-    margin: auto;
-    margin-top: 100px;
-    background-color: lightblue;
-    text-align: center;
-    width: 300px;
-    height: 300px;
+/* ë©”ì¸ */
+#main {
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 20px;
+  background-color: lightblue;
+  text-align: center;
+  width: 500px;
+  height: 800px;
+}
+
+/* ì±„íŒ… ì˜ì—­ */
+#chat {
+  height: 90%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+/* ì ‘ì† ì•Œë¦¼ */
+.connect {
+  width: 90%;
+  margin: auto;
+  background-color: aquamarine;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* ì ‘ì† ì¢…ë£Œ ì•Œë¦¼ */
+.disconnect {
+  width: 90%;
+  margin: auto;
+  background-color: indianred;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* ë‚´ê°€ ë³´ë‚¸ ë©”ì‹œì§€ */
+.me {
+  width: 90%;
+  margin: auto;
+  background-color: lemonchiffon;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* ìƒëŒ€ë°©ì´ ë³´ë‚¸ ë©”ì‹œì§€ */
+.other {
+  width: 90%;
+  margin: auto;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 10px;
 }
