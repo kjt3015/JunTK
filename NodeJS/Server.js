@@ -24,8 +24,8 @@ app.get('/', function (request, response) {
     })
 })
 
-app.get('/calculator/', function (request, response) {
-    fs.readFile('./static/calculator.html', function (err, data) {
+app.get('/Calculator/', function (request, response) {
+    fs.readFile('./static/Calculator.html', function (err, data) {
         if (err) {
             response.send('에러')
         } else {
@@ -36,7 +36,7 @@ app.get('/calculator/', function (request, response) {
     })
 })
 
-app.get('/', function (request, response) {
+app.get('/OnlineChat/', function (request, response) {
     fs.readFile('./static/OnlineChat.html', function (err, data) {
         if (err) {
             response.send('에러')
