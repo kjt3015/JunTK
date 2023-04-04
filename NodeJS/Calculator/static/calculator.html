@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="./js/calculator.js"></script>
+    <link rel="stylesheet" href="./css/calculator.css">
+</head>
+
+<body>
+    <h2 id="gone"> 지원되지 않는 크기의 화면입니다.  </h2>
+    <div id="jun">
+        <h1 style="text-align: center;">
+            Calculator
+        </h1>
+
+        <div id="my_container" style="border: 2px solid;">
+            <div class="new_container" style="border: 2px solid; margin: 7px; height: 50px;">
+                <div id="parsing" style="border: none;"></div>
+                <div class="container_display" style="border: none;">
+                    <div id="sub_display" style="border: none;"></div>
+                    <div id="display" style="border: none; text-align: right;"></div>
+                </div>
+            </div>
+            <div class="container" style="margin: 7px; border: 0px solid; ">
+                <div onclick="CE()">CE</div>
+                <div onclick="C()">C</div>
+                <div onclick="DEL()">Del</div>
+                <div onclick="justdoit(this.textContent)">/</div>
+
+                <div onclick="display_input(this.textContent)">7</div>
+                <div onclick="display_input(this.textContent)">8</div>
+                <div onclick="display_input(this.textContent)">9</div>
+                <div onclick="justdoit(this.textContent)">*</div>
+
+                <div onclick="display_input(this.textContent)">4</div>
+                <div onclick="display_input(this.textContent)">5</div>
+                <div onclick="display_input(this.textContent)">6</div>
+                <div onclick="justdoit(this.textContent)">-</div>
+
+                <div onclick="display_input(this.textContent)">1</div>
+                <div onclick="display_input(this.textContent)">2</div>
+                <div onclick="display_input(this.textContent)">3</div>
+                <div onclick="justdoit(this.textContent)">+</div>
+
+                <div onclick="alert('행군엔양갱\n kjt3015@gmail.com')">J</div>
+                <div onclick="display_input(this.textContent)">0</div>
+                <div onclick="display_input(this.textContent)">.</div>
+                <div onclick="justdoit(this.textContent)">=</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
