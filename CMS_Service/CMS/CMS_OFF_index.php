@@ -1,6 +1,19 @@
 <?php
 //서버와 연결
-include '../src/lib/sql_con.php';
+// include '../src/lib/sql_con.php';
+$servername = "conank.iptime.org";
+$username = "cmsAdmin";
+$password = "simulab_vc";
+$database = "cmsDB";
+$port = 53306;
+
+$conn = new mysqli($servername, $username, $password, $database, $port);
+mysqli_set_charset($conn, "utf8");
+
+// 접속 오류 확인
+if($conn->connect_error){
+    die("MySQL 서버 접속 오류: " . $conn->connect_error);
+}
 
 //carList 모든 항목 쿼리문작성, 결과값 수신
 $sql = "SELECT * FROM carList WHERE carStatus='예약가능'";
