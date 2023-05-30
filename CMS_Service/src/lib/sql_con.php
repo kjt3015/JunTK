@@ -1,9 +1,9 @@
 <?php
-$servername = "conank.iptime.org";
+$servername = "localhost";
 $username = "cmsAdmin";
 $password = "simulab_vc";
 $database = "cmsDB";
-$port = 53306;
+$port = 3306;
 
 $conn = new mysqli($servername, $username, $password, $database, $port);
 mysqli_set_charset($conn, "utf8");
