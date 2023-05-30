@@ -1,3 +1,18 @@
+<?php
+include '../src/lib/sql_con.php';
+
+// $sql = "SELECT * FROM carLog WHERE carList_id='{$_GET['id']}'";
+$sql = "select * from carLog where carList_id = '{$_GET['id']}' order by id desc limit 1";
+$result = $conn->query($sql);
+
+$myarray = array();
+
+while($row = mysqli_fetch_assoc($result)){
+    $myarray[]=$row;
+}
+// echo print_r($myarray);
+?>
+
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -9,32 +24,20 @@
 </head>
 
 <body>
-    <div class="title">
-        <h2>
-            Return
-        </h2>
-    </div>
-    <div class="main">
-        <h3>
-            김준태
-        </h3>
-        <span>
-            시작시간: <span>오전 10:00</span><br>
-        </span>
-        <span>
-            종료시간: <span>오후 13:00</span><br>
-        </span>
-        <br>
-        
-        <form action=".index.php" method="post">
-            <label for="location"><h3>주차위치</h3></label>
-            <input type="text" name="location">
+    <?php include '../src/lib/header.php' ?>
+    <div id="main" style="width: 90%; top: 30%;">
+        <h3>운전자</h3>
+        <p><?php echo $myarray[0]['userName']; ?></p>
+        <h3>주행시간</h3>
+        <p><?php echo $myarray[0]['startTime']." ~ ".$myarray[0]['endTime']; ?></p>
+
+        <form action="./lib/lib_Return.php" method="POST">
+            <label for="insert_location"><h3>주차위치</h3></label>
+            <input type="hidden" name="id" value="<?= $_GET['id'] ?>">
+            <input type="text" name="carLocation">
             <input type="submit" value="사용종료" />
         </form>
     </div>
-    <nav>
-        <?php include '../src/lib/menu_bar.php' ?>
-    </nav>
 </body>
 
 </html>

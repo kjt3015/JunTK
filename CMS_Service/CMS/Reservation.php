@@ -1,9 +1,12 @@
 <?php
-    include '../src/lib/sql_con.php';
+include '../src/lib/sql_con.php';
 
-    $sql = "SELECT * FROM newCar WHERE id={$_GET['id']}";
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_array($result);
+$sql = "SELECT carLocation FROM carList WHERE id='{$_GET['id']}'";
+
+$result = $conn->query($sql);
+$myarray = array();
+
+$row = mysqli_fetch_assoc($result)
 ?>
 
 <!DOCTYPE html>
@@ -17,28 +20,19 @@
 </head>
 
 <body>
-    <div class="title">
-        <h2>
-            Reservation
-        </h2>
-    </div>
-    <div class="main">
+    <?php include '../src/lib/header.php' ?>
+    <div id="main" style="width: 90%; top: 30%;">
         <h3>주차위치</h3>
-        <div>
-            <span><?= $row['location']; ?></span> <span><?= $row[''] ?></span>
-        </div>
-        
-        <form action="./lib/send.php" method="POST">
+        <div><span><?= $row['carLocation']; ?></span></div>
+
+        <form action="./lib/lib_Reservation.php" method="POST">
             <label for="time"><h3>예약</h3></label>
             <input type="hidden" name="id" value="<?= $_GET['id'] ?>">
-            예약자: <input type="text" name="name" placeholder="ex.홍길동"><br>
-            예약시간: <input type="time" name="start"> ~ <input type="time" name="end"><br>
+            예약자: <input type="text" name="userName" placeholder="ex.홍길동"><br>
+            예약시간: <input type="time" name="startTime"> ~ <input type="time" name="endTime"><br>
             <input type="submit" value="submit">
         </form>
     </div>
-    <nav>
-        <?php include '../src/lib/menu_bar.php' ?>
-    </nav>
 </body>
 
 </html>
